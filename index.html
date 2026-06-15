@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Tábuas Premium</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+header{
+    background:#5b3a29;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#3d2518;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+.hero{
+    height:500px;
+    background:url('https://images.unsplash.com/photo-1529692236671-f1dc923f7f65?w=1200') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-shadow:2px 2px 5px black;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.container{
+    width:90%;
+    max: width 600px;px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+h2{
+    color:#5b3a29;
+    margin-bottom:15px;
+}
+
+form{
+    display:grid;
+    gap:15px;
+}
+
+input, textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    background:#5b3a29;
+    color:white;
+    border:none;
+    padding:12px;
+    cursor:pointer;
+    border-radius:5px;
+    font-size:16px;
+}
+
+button:hover{
+    background:#7b4c35;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.galeria img{
+    width:100%;
+    border-radius:10px;
+}
+
+footer{
+    background:#3d2518;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+.lista-clientes{
+    margin-top:20px;
+}
+
+.cliente{
+    background:#eee;
+    padding:10px;
+    margin-top:10px;
+    border-radius:5px;
+}
+
+
+.catalogo-tabuas{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    margin-top:20px;
+}
+
+.produto{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+.produto img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.produto h3{
+    padding:15px;
+}
+
+.produto p{
+    padding:0 15px 15px;
+}
+
+.produto button{
+    width:90%;
+    margin:15px;
+    padding:12px;
+    background:#8B4513;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Tábuas Premium</h1>
+    <p>Projetos e Fabricação de Tábuas de Madeira para Churrasco</p>
+</header>
+
+<nav>
+    <a href="#empresa">Empresa</a>
+    <a href="#orcamento">Orçamento</a>
+    <a href="#cadastro">Cadastro</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<section class="hero">
+    <h1>TÁBUAS ARTESANAIS PREMIUM</h1>
+</section>
+
+<section id="personalizacao" class="card">
+
+    <h2>Personalize sua Tábua</h2>
+
+    <form id="formPersonalizacao">
+
+        <label>Modelo Escolhido</label>
+        <input type="text" id="modeloSelecionado" readonly>
+
+        <label>Nome ou Escrita</label>
+        <input type="text"
+               placeholder="Ex: Churrasco do João">
+
+        <label>Texto Secundário</label>
+        <input type="text"
+               placeholder="Ex: Desde 2026">
+
+        <label>Tamanho</label>
+        <select>
+            <option>30 x 20 cm</option>
+            <option>40 x 25 cm</option>
+            <option>50 x 30 cm</option>
+            <option>60 x 40 cm</option>
+        </select>
+
+        <label>Tipo de Madeira</label>
+        <select>
+            <option>Ipê</option>
+            <option>Jatobá</option>
+            <option>Muiracatiara</option>
+            <option>Peroba Rosa</option>
+        </select>
+
+        <label>Observações</label>
+        <textarea rows="5"></textarea>
+
+        <button type="submit">
+            Solicitar Orçamento
+        </button>
+
+    </form>
+
+</section>
+
+
+
+<section id="catalogo" class="card">
+
+    <h2>Catálogo de Tábuas Personalizadas</h2>
+
+    <p>
+        Escolha o modelo desejado e personalize sua tábua para churrasco.
+    </p>
+
+    <div class="catalogo-tabuas">
+
+        <div class="produto">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=800" alt="Tábua Retangular">
+
+            <h3>Tábua Retangular Premium</h3>
+
+            <p>Ideal para churrascos e presentes personalizados.</p>
+
+            <button onclick="selecionarModelo('Tábua Retangular Premium')">
+                Selecionar
+            </button>
+        </div>
+
+        <div class="produto">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800" alt="Tábua Rústica">
+
+            <h3>Tábua Rústica Artesanal</h3>
+
+            <p>Madeira nobre com acabamento rústico.</p>
+
+            <button onclick="selecionarModelo('Tábua Rústica Artesanal')">
+                Selecionar
+            </button>
+        </div>
+
+        <div class="produto">
+            <img src="https://images.unsplash.com/photo-1529692236671-f1dc923f7f65?w=800" alt="Tábua Personalizada">
+
+            <h3>Tábua Personalizada Especial</h3>
+
+            <p>Gravação a laser com nome ou logomarca.</p>
+
+            <button onclick="selecionarModelo('Tábua Personalizada Especial')">
+                Selecionar
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<div class="container">
+
+    <section id="empresa" class="card">
+        <h2>Sobre Nossa Empresa</h2>
+        <p>
+            Somos especialistas no desenvolvimento e fabricação de tábuas de madeira
+            para churrasco, cortes especiais e presentes personalizados.
+            Trabalhamos com madeiras nobres, acabamento premium e gravação personalizada.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Galeria</h2>
+
+        <div class="galeria">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600" alt="">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600" alt="">
+            <img src="https://images.unsplash.com/photo-1529692236671-f1dc923f7f65?w=600" alt="">
+        </div>
+    </section>
+
+    <section id="orcamento" class="card">
+        <h2>Solicitar Orçamento</h2>
+
+        <form>
+            <input type="text" placeholder="Nome">
+            <input type="tel" placeholder="Telefone">
+            <input type="email" placeholder="E-mail">
+
+            <input type="text" placeholder="Tipo de Madeira">
+
+            <input type="text" placeholder="Medidas da Tábua">
+
+            <textarea rows="5" placeholder="Descreva seu projeto"></textarea>
+
+            <button type="submit">
+                Solicitar Orçamento
+            </button>
+        </form>
+    </section>
+
+    <section id="cadastro" class="card">
+        <h2>Cadastro de Clientes</h2>
+
+        
+        <form id="formCadastro">
+
+            <input type="text" id="nome" placeholder="Nome Completo" required>
+
+            <input type="tel" id="telefone" placeholder="Telefone" required>
+
+            <input type="email" id="email" placeholder="E-mail" required>
+
+            <input type="text" id="cpf" placeholder="CPF" required>
+
+            <input type="text" id="endereco" placeholder="Endereço" required>
+
+            <button type="submit">
+                Cadastrar Cliente
+            </button>
+
+        </form>
+
+        <div class="lista-clientes" id="listaClientes"></div>
+
+    </section>
+
+    <section id="contato" class="card">
+        <h2>Contato</h2>
+
+        <p><strong>Telefone:</strong> (85) 99999-9999</p>
+
+        <p><strong>WhatsApp:</strong> (85) 99999-9999</p>
+
+        <p><strong>E-mail:</strong> contato@roriztabuas.com.br</p>
+
+        <p><strong>Endereço:</strong> Fortaleza - CE</p>
+
+    </section>
+
+</div>
+
+<footer>
+    <p>© 2026 Tábuas Premium - Todos os direitos reservados.</p>
+</footer>
+
+<script>
+
+    function selecionarModelo(modelo){
+    document.getElementById("modeloSelecionado").value = modelo;
+
+    document
+        .getElementById("personalizacao")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+}
+
+const form = document.getElementById('formCadastro');
+const lista = document.getElementById('listaClientes');
+
+function carregarClientes(){
+
+    lista.innerHTML = '';
+
+    const clientes =
+        JSON.parse(localStorage.getItem('clientes')) || [];
+
+    clientes.forEach(cliente => {
+
+        lista.innerHTML += `
+        <div class="cliente">
+            <strong>${cliente.nome}</strong><br>
+            Telefone: ${cliente.telefone}<br>
+            E-mail: ${cliente.email}<br>
+            CPF: ${cliente.cpf}<br>
+            Endereço: ${cliente.endereco}
+        </div>
+        `;
+    });
+}
+
+form.addEventListener('submit', function(e){
+
+    e.preventDefault();
+
+    const cliente = {
+        nome: document.getElementById('nome').value,
+        telefone: document.getElementById('telefone').value,
+        email: document.getElementById('email').value,
+        cpf: document.getElementById('cpf').value,
+        endereco: document.getElementById('endereco').value
+    };
+
+    const clientes =
+        JSON.parse(localStorage.getItem('clientes')) || [];
+
+    clientes.push(cliente);
+
+    localStorage.setItem(
+        'clientes',
+        JSON.stringify(clientes)
+    );
+
+    alert('Cliente cadastrado com sucesso!');
+
+    form.reset();
+
+    carregarClientes();
+});
+
+carregarClientes();
+
+</script>
+
+</body>
+</html>
